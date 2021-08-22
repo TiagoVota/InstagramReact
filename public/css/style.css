@@ -29,7 +29,7 @@ body {
   cursor: pointer;
 }
 
-.navbar .container {
+.navbar .navbar-container {
   width: 100%;
   max-width: 935px;
   display: flex;
@@ -38,7 +38,7 @@ body {
   height: 100%;
 }
 
-.navbar .container > * {
+.navbar .navbar-container > * {
   display: flex;
   align-items: center;
   height: 100%;
@@ -56,7 +56,7 @@ body {
   margin: 0 10px;
 }
 
-.navbar .pesquisa input {
+.navbar .search input {
   width: 215px;
   height: 28px;
   border-radius: 3px;
@@ -66,15 +66,15 @@ body {
   text-align: center;
 }
 
-.navbar .icones ion-icon {
+.navbar .icons ion-icon {
   margin: 0 5px;
 }
 
-.navbar .icones-mobile {
+.navbar .icons-mobile {
   display: none;
 }
 
-.corpo {
+main {
   display: flex;
   justify-content: space-between;
   width: 935px;
@@ -82,7 +82,7 @@ body {
   margin-top: 88px;
 }
 
-.esquerda {
+.main-container {
   width: 100%;
   max-width: 614px;
 }
@@ -114,7 +114,7 @@ body {
   margin-right: 10px;
 }
 
-.story .imagem {
+.story .story-img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,13 +124,13 @@ body {
   
 }
 
-.story .imagem img {
+.story .story-img img {
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
 
-.story .usuario {
+.story .user {
   width: 66px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -138,7 +138,7 @@ body {
   height: 14px;
 }
 
-.stories .setinha {
+.stories .right-arrow {
   position: absolute;
   right: 10px;
   top: 45px;
@@ -157,7 +157,7 @@ body {
   margin-top: 18px;
 }
 
-.post .topo {
+.post .top {
   display: flex;
   justify-content: space-between;
   padding: 13px 16px;
@@ -165,44 +165,44 @@ body {
   font-weight: 500;
 }
 
-.post .topo .usuario, .post .topo .acoes {
+.post .top .user, .post .top .actions {
   display: flex;
   align-items: center;
 }
 
-.post .topo img {
+.post .top img {
   width: 32px;
   height: 32px;
   margin-right: 10px;
 }
 
-.post .usuario, .post .topo img, .post .fundo img, .post ion-icon, .post strong {
+.post .user, .post .top img, .post .footer img, .post ion-icon, .post strong {
   cursor: pointer;
 }
 
-.post .conteudo img {
+.post .post-content img {
   width: 100%;
 }
 
-.post .fundo .acoes {
+.post .footer .actions {
   display: flex;
   justify-content: space-between;
   padding: 13px 16px;
   font-size: 24px;
 }
 
-.post .fundo .acoes div:first-child ion-icon {
+.post .footer .actions div:first-child ion-icon {
   margin-right: 6px;
 }
 
-.post .fundo .curtidas {
+.post .footer .likes {
   display: flex;
   align-items: center;
   padding: 0 16px 13px;
   font-weight: 300;
 }
 
-.post .fundo .curtidas img {
+.post .footer .likes img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
@@ -218,18 +218,18 @@ body {
   top: 88px;
 }
 
-.sidebar > .usuario {
+.sidebar > .user {
   display: flex;
   align-items: center;
 }
 
-.sidebar > .usuario img {
+.sidebar > .user img {
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
 
-.sidebar > .usuario .texto {
+.sidebar > .user .text {
   display: flex;
   flex-direction: column;
   margin-left: 14px;
@@ -237,19 +237,19 @@ body {
   color: #8E8E8E;
 }
 
-.sidebar > .usuario .texto strong {
+.sidebar > .user .text strong {
   font-weight: 500;
   color: #262626;
 }
 
-.sidebar .sugestoes .titulo {
+.sidebar .suggestions .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 14px;
 }
 
-.sidebar .sugestoes .sugestao {
+.sidebar .suggestions .suggestion {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,28 +258,28 @@ body {
   margin-bottom: 16px;
 }
 
-.sidebar .sugestoes .sugestao .usuario {
+.sidebar .suggestions .suggestion .user {
   display: flex;
 }
 
-.sidebar .sugestoes img {
+.sidebar .suggestions img {
   width: 32px;
   height: 32px;
 }
 
-.sidebar .sugestoes .seguir {
+.sidebar .suggestions .follow {
   color: #139EF2;
   font-weight: 600;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto {
+.sidebar .suggestions .suggestion .user .text {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto :last-child {
+.sidebar .suggestions .suggestion .user .text :last-child {
   color: #8E8E8E;
   font-weight: 400;
 }
@@ -298,11 +298,11 @@ body {
   margin-top: 18px;
 }
 
-.fundo-mobile {
+.footer-mobile {
   display: none;
 }
 
-.fundo-mobile ion-icon {
+.footer-mobile ion-icon {
   cursor: pointer;
 }
 
@@ -315,18 +315,18 @@ body {
     display: none;
   }
 
-  .navbar .container {
+  .navbar .navbar-container {
     padding: 0 20px;
   }
 
-  .corpo {
+  main {
     justify-content: center;
     width: 100%;
   }
 }
 
 @media (max-width: 614px) {
-  .corpo {
+  main {
     margin-top: 0;
   }
 
@@ -351,19 +351,19 @@ body {
     margin-top: 0;
   }
 
-  .navbar .pesquisa {
+  .navbar .search {
     display: none;
   }
 
-  .navbar .icones {
+  .navbar .icons {
     display: none;
   }
 
-  .navbar .icones-mobile {
+  .navbar .icons-mobile {
     display: flex;
   }
 
-  .fundo-mobile {
+  .footer-mobile {
     display: flex;
     padding: 0 20px;
     justify-content: space-between;
